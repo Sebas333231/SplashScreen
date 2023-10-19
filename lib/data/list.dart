@@ -30,7 +30,7 @@ List<Components> listaComponents = [
           "durarán toda la vida. ¡Únete a la comunidad viajera "
           "y haz realidad tus sueños de viaje!",
       backgroundColor: LottieBuilder.asset("../images/animation3.json", fit: BoxFit.cover,),
-    imagen2: '../images/imga1.png',
+    imagen2: '../images/img1.jpg',
     background: Colors.black
   ),
   Components(
@@ -48,7 +48,7 @@ List<Components> listaComponents = [
           fit: BoxFit.cover,
         ),
       ),
-      imagen2: '../images/imga2.png',
+      imagen2: '../images/img2.jpg',
       background: Colors.white
   ),
   Components(
@@ -58,7 +58,7 @@ List<Components> listaComponents = [
           'nuestras rutas secretas y desentraña los tesoros '
           'ocultos que solo los viajeros más intrépidos conocen.',
       backgroundColor: LottieBuilder.asset("../images/animation3.json", fit: BoxFit.cover),
-      imagen2: '../images/imga3.png',
+      imagen2: '../images/img3.jpg',
       background: Colors.black
   ),
   Components(
@@ -74,7 +74,7 @@ List<Components> listaComponents = [
           fit: BoxFit.cover,
         ),
       ),
-      imagen2: '../images/imga4.png',
+      imagen2: '../images/img4.jpg',
       background: Colors.white
   ),
   Components(
@@ -84,7 +84,7 @@ List<Components> listaComponents = [
           'también cambia tu perspectiva. Únete a nuestra '
           'comunidad global de ''viajeros y descubre cómo viajar puede transformar tu vida.',
       backgroundColor: LottieBuilder.asset("../images/animation3.json", fit: BoxFit.cover),
-      imagen2: '../images/imga5.png',
+      imagen2: '../images/img5.jpg',
       background: Colors.black
   ),
 ];

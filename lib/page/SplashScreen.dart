@@ -71,14 +71,6 @@ class _SplashScreenState extends State<SplashScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                /*Padding(
-                            padding: EdgeInsets.only(),
-                            child: SvgPicture.asset(
-                              listaComponents[index].image,
-                              width: 260,
-                              height: 260,
-                            ),
-                          ),*/
                                 Padding(
                                   padding: const EdgeInsets.only(left: 20, right: 20),
                                   child: Text(
@@ -170,14 +162,14 @@ class _SplashScreenState extends State<SplashScreen> {
                                     width: 100,
                                     height: 35,
                                     decoration: BoxDecoration(
-                                      color: colors ? Colors.white : Colors.black,
+                                      color: listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white,
                                       borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Center(
                                       child: Text(
                                         'Omitir',
                                         style: TextStyle(
-                                            color: colors ? Colors.black : Colors.white,
+                                            color: listaComponents[currentIndex].background == Colors.white? Colors.white : Colors.black,
                                             fontFamily: 'CroissantOne',
                                             fontSize: 17
                                         ),
@@ -205,12 +197,12 @@ class _SplashScreenState extends State<SplashScreen> {
                                     value: porcentaje,
                                     backgroundColor: colors ? Colors.grey : Colors.grey,
                                     valueColor: AlwaysStoppedAnimation<Color>(
-                                        colors ? Colors.white : Colors.black
+                                        listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white
                                     ),
                                   ),
                                 ),
                                 CircleAvatar(
-                                  backgroundColor: colors ? Colors.white : Colors.black,
+                                  backgroundColor: listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white,
                                   child: Icon(
                                     Icons.arrow_forward_ios_outlined,
                                     color: listaComponents[currentIndex].background,
@@ -277,25 +269,32 @@ class _SplashScreenState extends State<SplashScreen> {
                                      child: Container(
                                          height: MediaQuery.of(context).size.height,
                                          decoration: BoxDecoration(
-                                             image: const  DecorationImage(
+                                             image: DecorationImage(
                                                  image: AssetImage(
-                                                     "../images/imagen4.jpg"
+                                                     listaComponents[index].imagen2
                                                  ),
                                                  fit: BoxFit.cover
                                              ),
                                              borderRadius: BorderRadius.circular(20)
                                          ),
-                                         child: Center(
-                                           child: Text(
-                                             listaComponents[index].titulo,
-                                             style: TextStyle(
-                                                 fontSize: 30,
-                                                 fontWeight: FontWeight.bold,
-                                                 color: Colors.white,
-                                                 fontFamily: "DelaGothicOne"
+                                         child: Container(
+                                             width: MediaQuery.of(context).size.width,
+                                             height: MediaQuery.of(context).size.height,
+                                             decoration: const BoxDecoration(
+                                               color: Color(0x27000000),
                                              ),
-                                             textAlign: TextAlign.center,
-                                           ),
+                                             child: Center(
+                                               child: Text(
+                                                 listaComponents[index].titulo,
+                                                 style: const TextStyle(
+                                                     fontSize: 30,
+                                                     fontWeight: FontWeight.bold,
+                                                     color: Colors.white,
+                                                     fontFamily: "DelaGothicOne"
+                                                 ),
+                                                 textAlign: TextAlign.center,
+                                               ),
+                                             )
                                          )
                                      ),
                                    )
@@ -346,25 +345,33 @@ class _SplashScreenState extends State<SplashScreen> {
                                      child: Container(
                                        height: MediaQuery.of(context).size.height,
                                        decoration: BoxDecoration(
-                                           image: const  DecorationImage(
+                                           image: DecorationImage(
                                                image: AssetImage(
-                                                   "../images/imagen5.jpg"
+                                                   listaComponents[index].imagen2
                                                ),
                                                fit: BoxFit.cover
                                            ),
                                            borderRadius: BorderRadius.circular(20)
                                        ),
-                                       child: Center(
-                                         child: Text(
-                                           listaComponents[index].titulo,
-                                           style: TextStyle(
-                                               fontSize: 30,
-                                               fontWeight: FontWeight.bold,
-                                               color: colors ? Colors.black : Colors.white,
-                                               fontFamily: "DelaGothicOne"
+                                       child: Container(
+                                           width: MediaQuery.of(context).size.width,
+                                           height: MediaQuery.of(context).size.height,
+                                           decoration: BoxDecoration(
+                                             color: Color(0x27000000),
+                                               borderRadius: BorderRadius.circular(20)
                                            ),
-                                           textAlign: TextAlign.center,
-                                         ),
+                                           child: Center(
+                                             child: Text(
+                                               listaComponents[index].titulo,
+                                               style: const TextStyle(
+                                                   fontSize: 30,
+                                                   fontWeight: FontWeight.bold,
+                                                   color: Colors.white,
+                                                   fontFamily: "DelaGothicOne"
+                                               ),
+                                               textAlign: TextAlign.center,
+                                             ),
+                                           )
                                        )
                                      ),
                                    )
@@ -400,14 +407,14 @@ class _SplashScreenState extends State<SplashScreen> {
                                    width: 120,
                                    height: 45,
                                    decoration: BoxDecoration(
-                                     color: colors ? Colors.white : Colors.black,
+                                     color: listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white,
                                      borderRadius: BorderRadius.circular(10),
                                    ),
                                    child: Center(
                                      child: Text(
                                        'Omitir',
                                        style: TextStyle(
-                                           color: colors ? Colors.black : Colors.white,
+                                           color: listaComponents[currentIndex].background == Colors.white ? Colors.white : Colors.black,
                                            fontFamily: 'CroissantOne',
                                            fontSize: 20
                                        ),
@@ -435,12 +442,12 @@ class _SplashScreenState extends State<SplashScreen> {
                                    value: porcentaje,
                                    backgroundColor: colors ? Colors.grey : Colors.grey,
                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                       colors ? Colors.white : Colors.black
+                                       listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white
                                    ),
                                  ),
                                ),
                                CircleAvatar(
-                                 backgroundColor: colors ? Colors.white : Colors.black,
+                                 backgroundColor: listaComponents[currentIndex].background == Colors.white ? Colors.black : Colors.white,
                                  child: Icon(
                                    Icons.arrow_forward_ios_outlined,
                                    color: listaComponents[currentIndex].background,
@@ -593,14 +600,14 @@ class _SplashScreenState extends State<SplashScreen> {
                                     width: 120,
                                     height: 45,
                                     decoration: BoxDecoration(
-                                      color: colors ? Colors.white : Colors.black,
+                                      color: listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white,
                                       borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Center(
                                       child: Text(
                                         'Omitir',
                                         style: TextStyle(
-                                            color: colors ? Colors.black : Colors.white,
+                                            color: listaComponents[currentIndex].background,
                                             fontFamily: 'CroissantOne',
                                             fontSize: 20
                                         ),
@@ -628,12 +635,12 @@ class _SplashScreenState extends State<SplashScreen> {
                                     value: porcentaje,
                                     backgroundColor: colors ? Colors.grey : Colors.grey,
                                     valueColor: AlwaysStoppedAnimation<Color>(
-                                        colors ? Colors.white : Colors.black
+                                        listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white,
                                     ),
                                   ),
                                 ),
                                 CircleAvatar(
-                                  backgroundColor: colors ? Colors.white : Colors.black,
+                                  backgroundColor: listaComponents[currentIndex].background == Colors.white? Colors.black : Colors.white,
                                   child: Icon(
                                     Icons.arrow_forward_ios_outlined,
                                     color: listaComponents[currentIndex].background,
